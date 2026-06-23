@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一般常識クイズ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>一般常識クイズ</h1>
+    </header>
+
+    <main id="app">
+      <!-- スタート画面 -->
+      <div id="screen-start" class="screen">
+        <p class="description">全10問・4択形式の一般常識クイズです。<br>さっそく挑戦してみましょう！</p>
+        <button id="btn-start" class="btn btn-primary">スタート</button>
+      </div>
+
+      <!-- 問題画面 -->
+      <div id="screen-quiz" class="screen hidden">
+        <div class="progress">
+          <span id="question-number">問題 1 / 5</span>
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+        </div>
+        <div class="question-card">
+          <p id="question-text" class="question-text"></p>
+          <ul id="choices" class="choices"></ul>
+          <div id="feedback" class="feedback hidden">
+            <p id="feedback-message"></p>
+            <p id="feedback-explanation" class="explanation"></p>
+            <button id="btn-next" class="btn btn-primary">次の問題へ</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 結果画面 -->
+      <div id="screen-result" class="screen hidden">
+        <div class="result-card">
+          <p class="result-label">あなたのスコア</p>
+          <p id="score-display" class="score"></p>
+          <p id="score-message" class="score-message"></p>
+          <button id="btn-retry" class="btn btn-primary">もう一度挑戦する</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
